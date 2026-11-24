@@ -14,7 +14,7 @@ exploit. Consecutive timestamps are usually separated by nearly constant
 intervals, and consecutive values of a physical quantity tend to change
 smoothly. Time-series databases use this property with techniques such as
 delta-of-delta timestamp encoding and XOR-based compression of floating-point
-values @pelkonen2015gorilla.
+values.
 
 Existing options leave a gap for resource-constrained devices. Flat files and
 CSV are simple, but they are uncompressed and inefficient to query.
@@ -22,8 +22,8 @@ Server-based time-series databases such as InfluxDB or TimescaleDB are
 designed for server environments and are heavy for small devices.
 General-purpose engines such as SQLite or DuckDB are not specialised for
 high-frequency single-row inserts and generally do not compress sensor data.
-Research systems aimed at embedded devices exist, for example EmbedDB
-@, and we will compare our idea with them in later sections.
+Research systems aimed at embedded devices exist, for example EmbedDB, 
+and we will compare our idea with them in later sections.
 
 The goal of this thesis is to design and implement a lightweight embedded
 time-series storage engine for such devices. The engine stores timestamped
